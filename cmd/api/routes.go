@@ -23,6 +23,8 @@ func (app *application) routes() http.Handler {
 	mux.Get("/movies", app.AllMovies)
 	mux.Get("/movies/{id}", app.GetMovie)
 
+	mux.Get("/genre", app.AllGenres)
+
 	mux.Route("/admin", func(r chi.Router) {
 		r.Use(app.authRequired)
 
