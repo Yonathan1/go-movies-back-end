@@ -64,7 +64,7 @@ func New(movies []*models.Movie) *Graph {
 			Type:        graphql.NewList(movieType),
 			Description: "Search movies by title",
 			Args: graphql.FieldConfigArgument{
-				"titleContaines": &graphql.ArgumentConfig{
+				"titleContains": &graphql.ArgumentConfig{
 					Type: graphql.String,
 				},
 			},
